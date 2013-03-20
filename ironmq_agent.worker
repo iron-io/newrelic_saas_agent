@@ -1,0 +1,8 @@
+runtime 'ruby'
+exec 'ironmq_agent.rb'
+
+dir 'config'
+
+gem 'iron_mq'
+gem 'iron_cache'
+gem 'rest'
