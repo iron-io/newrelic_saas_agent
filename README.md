@@ -4,4 +4,3 @@
 2. fill in config.yml
 3. iron_worker upload newrelic_worker
 4. schedule it
-
