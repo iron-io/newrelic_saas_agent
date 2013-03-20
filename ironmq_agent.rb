@@ -29,7 +29,7 @@ queues.each do |q|
   name = q.name
 
   puts "\nFound queue: #{name} [#{size} messages]"
-  metric_name_size = "Component/Queue/size[messages]"
+  metric_name_size = "Component/Queued Messages[messages]"
 
   # Add size component
   components_array << {
@@ -50,13 +50,13 @@ queues.each do |q|
     lastsize = rate = 0
   else
     lastsize = item.value
-    rate = size - lastsize
+    rate=(((size-lastsize)/60).to_f).round(2)
   end
   cache.put(key, size)
 
-  puts " Size was #{lastsize}, now #{size}  [Rate #{rate} messages/min]"
+  puts " Size was #{lastsize}, now #{size}  [Rate #{rate} messages/sec]"
 
-  metric_name_rate = "Component/Queue/rate[messages/min]"
+  metric_name_rate = "Component/Message Rate[messages/sec]"
   components_array << {
     :name => name,
     :guid => 'io.iron.mq',
