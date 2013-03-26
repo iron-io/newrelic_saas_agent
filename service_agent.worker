@@ -1,9 +1,9 @@
 runtime 'ruby'
+exec 'service_agent.rb'
 
 dir 'config'
 
 #gem 'newrelic_gem_or_whatever_it_ends_up_being_called'
-gem 'iron_mq'
-gem 'iron_cache'
 
-exec 'service_agent.rb'
+# include any gems required to get data from service
+
