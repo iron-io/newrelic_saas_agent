@@ -1,0 +1,9 @@
+runtime 'ruby'
+
+dir 'config'
+
+#gem 'newrelic_gem_or_whatever_it_ends_up_being_called'
+gem 'iron_mq'
+gem 'iron_cache'
+
+exec 'service_agent.rb'

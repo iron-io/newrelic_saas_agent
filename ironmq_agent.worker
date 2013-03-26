@@ -1,4 +1,5 @@
 runtime 'ruby'
+
 exec 'ironmq_agent.rb'
 
 dir 'config'
