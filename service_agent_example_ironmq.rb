@@ -3,6 +3,10 @@ require 'iron_mq'
 require 'iron_cache'
 require 'yaml'
 
+# Requires manual installation of the New Relic plaform gem (platform is in closed beta)
+# https://github.com/newrelic-platform/iron_sdk
+require 'newrelic_platform'
+
 config = YAML.load_file('config/config.yml')
 
 ironmq = IronMQ::Client.new(
@@ -19,11 +23,11 @@ cache = ironcache.cache("ironmq_agent_cache")
 
 queues = ironmq.queues.all
 
-@new_relic = NewRelic::Client.new(:license => config['newrelic']['license'],
+new_relic = NewRelic::Client.new(:license => config['newrelic']['license'],
                                   :guid => config['newrelic']['guid'],
                                   :version => config['newrelic']['version'])
 
-collector = @new_relic.new_collector
+collector = new_relic.new_collector
 
 # For each queue
 queues.each do |q|
