@@ -24,9 +24,10 @@ NOTE: This only needs to be done one time by the owners of the SaaS service. Use
 
 **Why:** This allows users to easily customize what data they want sent from the SaaS services API into New Relic. Also it makes it so that the SaaS service doesn't need to even know about New Relic as it's all done using already available API's.
 
-**How:** The newrelic_platform gem and IronWorker, a service provided by Iron.io that allows for a very easy way to schedule the agent to run every minute, grabbing data from
+**How:** The newrelic_platform gem and [IronWorker](http://iron.io/worker), a service provided by [Iron.io](http://iron.io) that allows for a very easy way to schedule the agent to run every minute.
 
 1. Copy config/sample_config.yml to config/config.yml
+1. Create free account at [Iron.io](http://iron.io)
 1. Fill in config.yml
 1. Upload it: `iron_worker upload my_service_agent`
 1. Test it: `iron_worker queue my_service_agent` - check it at hud.iron.io
@@ -40,4 +41,3 @@ We have provided an example agent for review. You can easily follow the instruct
 service_agent_example_ironmq.rb
 
 service_agent_example_ironmq.worker
-
