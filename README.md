@@ -1,9 +1,11 @@
 
+## Creating a SaaS Agent
 
-# Creating your own SaaS Agent
+**Who:** Owner or power user of a SaaS service with an API
 
-These instructions are for creating an agent for any SaaS web service. Once created, the agent can then be run by users of the
-web service to push the data from their specific account into New Relic.
+**Why:** All-the-data's into New Relic!
+
+**How:**
 
 1. Fork repo
 1. Add required settings to config/sample_config.yml (remember this is for distribution so do not put real credentials here)
@@ -13,10 +15,16 @@ web service to push the data from their specific account into New Relic.
 
 That's it! Now users can USE your SaaS agent with the instructions below.
 
+NOTE: This only needs to be done one time by the owners of the SaaS service. Users follow the instructions below.
 
-# Using a SaaS Agent
 
-These are user instructions for installing and running an agent to send your own SaaS accounts data into New Relic for monitoring.
+## Using a SaaS Agent
+
+**Who:** Users of a SaaS/API service of which an agent has already been created (see above).
+
+**Why:** This allows users to easily customize what data they want sent from the SaaS services API into New Relic. Also it makes it so that the SaaS service doesn't need to even know about New Relic as it's all done using already available API's.
+
+**How:** The newrelic_platform gem and IronWorker, a service provided by Iron.io that allows for a very easy way to schedule the agent to run every minute, grabbing data from
 
 1. Copy config/sample_config.yml to config/config.yml
 1. Fill in config.yml
@@ -25,12 +33,12 @@ These are user instructions for installing and running an agent to send your own
 1. Schedule it: `iron_worker schedule my_service_agent --run-every 60`
 
 
-# Example Agent
+## Example Agent
 
 We have provided an example agent for review. You can easily follow the instructions above to use this example agent.
 
 service_agent_example_ironmq.rb
-service_agent_example_ironmq.worker
 
+service_agent_example_ironmq.worker
 
 
