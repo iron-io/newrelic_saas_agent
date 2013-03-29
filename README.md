@@ -37,7 +37,7 @@ NOTE: This only needs to be done one time by the owners of the SaaS service. Use
 
 We have provided an example agent for review. You can easily follow the instructions above to use this example agent. The example agent pulls data from the IronMQ API and posts it to New Relic every minute (using the IronWorker service).
 
-```service_agent_example_ironmq.rb```
+service_agent_example_ironmq.rb
 
-```service_agent_example_ironmq.worker```
+service_agent_example_ironmq.worker
 
