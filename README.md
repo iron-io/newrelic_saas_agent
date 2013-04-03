@@ -3,9 +3,9 @@
 
 **Who:** Anybody who wants to publish an agent for an API for others to use
 
-**What:** The New Relic platform is a way to push data into New Relic to track and monitor just like all other New Relic Data. Creating a SaaS agent is a one time activity that makes it drop dead simple for any user of that SaaS API to integrate their own data into their own New Relic account. The agent runs on the IronWorker platform by Iron.io.
+**What:** The [New Relic Platform](http://newrelic.com) is a way to push data into New Relic to track and monitor just like all other New Relic Data. Creating a SaaS agent is a one time activity that makes it drop dead simple for any user of that SaaS API to integrate their own data into their own New Relic account. The agent runs on the [IronWorker](http://iron.io/worker) platform by [Iron.io](http://iron.io).
 
-**Why:** New Relic makes viewing your data awesome, IronWorker makes collecting and sending to New Relic drop dead simple.
+**Why:** New Relic makes viewing your data awesome, [IronWorker](http://iron.io) makes collecting and sending to New Relic drop dead simple.
 
 **How:**
 
