@@ -15,9 +15,9 @@
 1. Rename service_agent.rb to whatever_service_agent.rb and fill in commented area.
 1. Commit and push to github!
 
-That's it! Now users can use your SaaS agent. 
+That's it! Now users can use your SaaS agent. For an example of how users use agents, see one of the examples below.
 
-#### Already Created Sample Agents
+#### Already Created Agents
 
 - [IronMQ](https://github.com/newrelic-platform/ironmq_extension) - Easily track data from the IronMQ cloud message queue service
 
