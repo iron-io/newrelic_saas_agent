@@ -1,4 +1,3 @@
-
 ## Creating a New Relic SaaS Agent
 
 **Who:** Anybody who wants to publish an agent for an API for others to use
@@ -9,7 +8,7 @@
 
 **How:**
 
-1. Fork this repo
+1. Fork this repo then rename it to what you want your agent to be called (eg: newrelic_ironmq_agent)
 1. Add required settings to config/sample_config.yml (remember this is for distribution so do not put real credentials here)
 1. Rename service_agent.worker to whatever_service_agent.worker and add required gems.
 1. Rename service_agent.rb to whatever_service_agent.rb and fill in commented area.
